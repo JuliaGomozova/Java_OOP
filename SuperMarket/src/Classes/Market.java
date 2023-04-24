@@ -32,7 +32,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour {
         takeInQueue(actor);
     }
 
-    //добавление покупателя в очередь
+    /**добавление покупателя в очередь*/
     @Override
     public void takeInQueue(iActorBehaviour actor) {
         this.queue.add(actor);
@@ -52,14 +52,14 @@ public class Market implements iMarketBehaviour, iQueueBehaviour {
         
     }
 
-    //обновление статусов покупателя
+    /**обновление статусов покупателя*/
     @Override
     public void update() {
        takeOrder();
        giveOrder();
        releaseFromQueue();
     }
-    //метод получения заказа 
+    /**метод получения заказа */
     @Override
     public void giveOrder() {
         for(iActorBehaviour actor: queue)  //для всех покупателей из очереди
@@ -72,7 +72,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour {
         }
         
     }
-    //удаление из очереди
+    /**удаление из очереди*/
     @Override
     public void releaseFromQueue() {
        List<Actor> releaseActors = new ArrayList<>(); //список удаляемых покуптелей. в этом списке собирём всех, кто уже забрал заказ
@@ -89,7 +89,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour {
     }
 
 
-    //покупатель взял заказ
+    /**покупатель взял заказ*/
     @Override
     public void takeOrder() {
         for(iActorBehaviour actor:queue) //проходим всех покупателей в очереди
@@ -103,7 +103,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour {
         }
         
     }
-    //принесен товар на возврат
+    /**принесен товар на возврат*/
     @Override
     public void bringOderBack(iReturnOrder actor) {
             if(!actor.isBringOrderBack()) //если принес заказ на возврат
@@ -114,7 +114,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour {
             }
           
     }
-    //Возврат осуществлен
+    /**Возврат осуществлен*/
     @Override
     public void comeOrderBack(iReturnOrder actor) {
 

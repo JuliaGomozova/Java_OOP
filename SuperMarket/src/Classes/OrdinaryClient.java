@@ -20,52 +20,52 @@ public class OrdinaryClient extends Actor {
     public String getName() {        
         return super.name; 
     }
-    // метод возвращает флаг сделал заказ покупатель или нет
+    /**метод возвращает статус покупателя сделал он заказ или нет*/
     @Override
     public boolean isMakeOrder() {
         return super.isMakeOrder;
     }
-    // метод возвращает статус покупателя получил заказ или нет
+    /**метод возвращает статус покупателя получил он заказ или нет*/
     @Override
     public boolean isTakeOrder() {
         return super.isTakeOrder;
     }
-
-    //устанавлиевает статус покупателя "сделал заказ"
+    /**метод вуставнавливает статус покупателя "сделал заказ"*/
     @Override
     public void setMakeOrder(boolean makeOrder) {
        super.isMakeOrder = makeOrder;
     }
-    //устанавлиевает статус покупателя "получил заказ"
+    /**метод вуставнавливает статус покупателя "получил заказ"*/
     @Override
     public void setTakeOrder(boolean pickUpOrder) {
        super.isTakeOrder = pickUpOrder;   
     }
 
-    //возвращает сомого себя
+    /**возвращает ссылку на самого себя*/
     @Override
     public Actor getActor() {
         return this;
     }
-    //устанавлиевает статус покупателя "принес заказ на возврат"
+    /**устанавлиевает статус покупателя "принес заказ на возврат"*/
     @Override
     public void setBringOrderBack(boolean backOrder) {
-        super.isBringROrderBack = backOrder;
+        super.isMakeOrder = backOrder;
     }
-    //устанавлиевает статус покупателя "возврат осуществлен"
+    /**устанавлиевает статус покупателя "возврат осуществлен"*/
     @Override
     public void setReturnOrder(boolean returnOrder) {
-        super.isReturnOrder = returnOrder;  
+        super.isTakeOrder = returnOrder;  
     }
-    // метод возвращает флаг принес покупатель возврат заказа или нет
+    /** метод возвращает флаг принес покупатель возврат заказа или нет*/
     @Override
     public boolean isBringOrderBack() {
         return super.isBringROrderBack;
     }
-    // метод возвращает флаг осуществлен возврат заказа или нет
+    /** метод возвращает флаг осуществлен возврат заказа или нет*/
     @Override
     public boolean isReturnOrder() {
         return super.isReturnOrder;
     }
+    
     
 }
