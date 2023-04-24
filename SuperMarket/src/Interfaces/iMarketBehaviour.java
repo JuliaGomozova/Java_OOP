@@ -8,7 +8,16 @@ import Classes.Actor;
 */
 public interface iMarketBehaviour {
     //прототипы методов
-    void acceptToMarket(iActorBehaviour actor); //требования к метоту "пришел в магазин"
-    void releaseFromMarket(List<Actor> actors); //требования к метоту "покинулв в магазин"
-    void update();                              //метот обновления статуса
+    /**
+    * метод "пришел в магазин"
+    */
+    void acceptToMarket(iActorBehaviour actor); 
+    /**
+    * метод "покинул магазин"
+    */
+    void releaseFromMarket(List<Actor> actors); 
+    /**
+    * обновление статуса
+    */
+    void update();                              
 }
