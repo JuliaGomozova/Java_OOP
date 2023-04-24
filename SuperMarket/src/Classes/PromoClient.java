@@ -15,7 +15,7 @@ public class PromoClient extends Actor {
         super(name);
         this.promo = promo;
     }
-    // метод возвращает название акции, в которой участвует покупатель
+    /** метод возвращает название акции, в которой участвует покупатель*/
     public String getPromo() {
         return promo;
     }   
